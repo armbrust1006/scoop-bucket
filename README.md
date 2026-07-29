@@ -3,9 +3,9 @@
 ```PowerShell
 scoop bucket add custom-bucket https://github.com/armbrust1006/scoop-bucket.git
 ```
-현재 등록된 버킷 정보 조회용 브랜치 입니다.
+main 브랜치는 전체 버킷 조회 및 최신 버킷을 제공하고 있습니다.
 
-실제 인스톨이 필요할 경우 각 브렌치를 참조해야 합니다.
+특정 버전의 경우, 각각 별도의 브렌치가 존재하니 확인 후 인스톨하시면 됩니다.
 
 ---
 
