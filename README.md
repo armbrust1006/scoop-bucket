@@ -1,10 +1,5 @@
 # Scoop Bucket
-**scoop 버킷 추가 명령어:**
+**scoop 인스톨 명령어:**
 ```PowerShell
-scoop bucket add custom-bucket https://github.com/armbrust1006/scoop-bucket.git
+scoop install https://raw.githubusercontent.com/armbrust1006/scoop-bucket/gradle-8.14.5/gradle-bin.json
 ```
-
----
-
-## Gradle Release Checksums
-[Gradle hash 값 경로](https://gradle.org/release-checksums)
