@@ -1,6 +1,6 @@
 {
     "version": "22.23.2",
-    "description": "Node.js (LTS)",
+    "description": "Node.js 22.x (LTS)",
     "homepage": "https://nodejs.org",
     "license": "MIT",
     "architecture": {
@@ -15,15 +15,24 @@
             "extract_dir": "node-v22.23.2-win-arm64"
         }
     },
-    "bin": ["node.exe", "npm.cmd", "npx.cmd"],
-    "env_add_path": ["bin", "."],
-    "persist": ["bin", "cache"],
+    "bin": [
+        "node.exe",
+        "npm.cmd",
+        "npx.cmd"
+    ],
+    "env_add_path": [
+        "bin",
+        "."
+    ],
+    "persist": [
+        "cache"
+    ],
     "post_install": [
         "Set-Content -Path \"$dir\\node_modules\\npm\\npmrc\" -Value \"prefix=$dir\", \"cache=$dir\\cache\" -Encoding Ascii"
     ],
     "checkver": {
         "url": "https://nodejs.org/dist/index.json",
-        "jsonpath": "$[?(@.lts)].version",
+        "jsonpath": "$[?(@.version =~ /^v22\\./)].version",
         "regex": "v([\\d.]+)"
     },
     "autoupdate": {
@@ -38,7 +47,7 @@
             }
         },
         "hash": {
-            "url": "https://nodejs.org/dist/v$version/SHASUMS256.txt"
+            "url": "https://nodejs.org/dist/v$version/SHASUMS256.txt.asc"
         }
     }
 }

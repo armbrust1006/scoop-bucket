@@ -11,3 +11,16 @@ main 브랜치는 전체 버킷 조회 및 최신 버킷을 제공하고 있습�
 
 ## Gradle Release Checksums
 [Gradle hash 값 경로](https://gradle.org/release-checksums)
+
+---
+
+## PNPM 해시 코드 생성
+**파일 다운로드 및 재생성:**
+```PowerShell
+Invoke-WebRequest "https://github.com/pnpm/pnpm/releases/download/v10.34.5/pnpm-win-arm64.exe" -OutFile p.exe
+```
+
+**해시 코드 생성:**
+```PowerShell
+Get-FileHash p.exe -Algorithm SHA256
+```
